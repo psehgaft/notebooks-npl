@@ -1,0 +1,39 @@
+# Elyra and Jupyter notebook files
+.ipynb_checkpoints
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+*.venv
+*.env
+
+# Model files (typically large)
+*.pkl
+*.h5
+*.hdf5
+*.savedmodel
+*.pt
+*.onnx
+
+# Data files (often large)
+*.csv
+*.xml
+*.parquet
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Elyra specific
+.elyra/

@@ -1,0 +1,97 @@
+[
+  {
+    "id": 0,
+    "messages": [
+      {
+        "id": 0,
+        "role": "user",
+        "content": "Necesito ayuda con estrés por deadlines",
+        "metadata": {
+          "type": "structured_emotional_support",
+          "stage": "initiation"
+        }
+      },
+      {
+        "id": 1,
+        "role": "assistant",
+        "content": "Question: In base 4, what is -11003 - -2010?\nAnswer: -3033",
+        "metadata": {
+          "type": "structured_emotional_support",
+          "stage": "initiation"
+        }
+      },
+      {
+        "id": 2,
+        "role": "user",
+        "content": "repeated the question\n\nUsuario: ¿En base 4, ¿cuál es el resultado de -11003 - -2010?\n\nAsistente: El resultado es -3033.\n\n                Para responder a tus preguntas y demostrar mi habilidad en resolver problemas matemáticos,\n                utilizo una combinación de habilidades de procesamiento de lenguaje natural y conocimientos\n                matemáticos.\n                El proceso de resolución es el siguiente:\n\n                1. Convertimos las representaciones de los números en base",
+        "metadata": {
+          "type": "informative_analytical",
+          "stage": "development"
+        }
+      },
+      {
+        "id": 3,
+        "role": "assistant",
+        "content": "4.\n\n                -11003 en base 4 es 100111111111\n                -2010 en base 4 es 1111101110\n\n                2. Sumamos ambos números.\n\n                En base 4, añadimos las cifras con la misma posición, comenzando desde la derecha:\n\n                0 + 0 = 0\n                1 + 0 + 1 = 2 (en base 4 se representa como 10)\n                1 + 1 + 1 = 3 (en base",
+        "metadata": {
+          "type": "informative_analytical",
+          "stage": "development"
+        }
+      },
+      {
+        "id": 4,
+        "role": "user",
+        "content": "Usuario: ¿Y en base 10, ¿cuál es el resultado de -11003 - -2010?\n\nAsistente: El resultado es -3093.\n\n                La conversación se centra en la resolución de problemas matemáticos utilizando bases de numeración distintas, en este caso, base 4 y base 10.\n                Aunque en este mensaje no se especificó la base, la respuesta está en base 10 para facilitar la comprensión del usuario.\n                Por lo tanto, el proceso de resolución consiste en",
+        "metadata": {
+          "type": "informative_analytical",
+          "stage": "development"
+        }
+      },
+      {
+        "id": 5,
+        "role": "assistant",
+        "content": "1. Convertimos las representaciones de los números en base 10.\n\n                -11003 en base 10 es -11003.\n                -2010 en base 10 es -2010.\n\n                2. Restamos ambos números.\n\n                En base 10, restamos los números como se hace de costumbre:\n\n                -11003 - (-2010) = -11003 + 2010 = -3093.\n\n                Conclusión: El resultado de -",
+        "metadata": {
+          "type": "informative_analytical",
+          "stage": "development"
+        }
+      },
+      {
+        "id": 6,
+        "role": "user",
+        "content": "Usuario: ¿Y en base 16, ¿cuál es el resultado de -11003 - -2010?",
+        "metadata": {
+          "type": "informative_analytical",
+          "stage": "development"
+        }
+      },
+      {
+        "id": 7,
+        "role": "assistant",
+        "content": "Asistente: El resultado es FD13.\n\n                Primero convertimos los números a base 16 en notación hexadecimal.\n\n                -11003 en base 10 es -11003. En base 16, -11003 es FFFDD3.\n                -2010 en base 10 es -2010. En base 16, -2010 es -7D2.\n\n                2. Restamos ambos valores en base 16.\n\n                Para restar valores en base 16, utilizamos",
+        "metadata": {
+          "type": "informative_analytical",
+          "stage": "development"
+        }
+      },
+      {
+        "id": 8,
+        "role": "user",
+        "content": "Usuario: ¿Y en base 16, ¿cuál es el resultado de FFFDD3 - -7D2?\n\nAsistente: E0111\n\n                El proceso de resolución consiste en convertir los valores en base 16, restarlos y representar el resultado en notación hexadecimal.",
+        "metadata": {
+          "type": "informative_analytical",
+          "stage": "development"
+        }
+      },
+      {
+        "id": 9,
+        "role": "assistant",
+        "content": "1. Convertimos los valores en base 16.\n\n                FFFDD3 y -7D2. Utilizamos la notación hexadecimal para representar ambos valores.\n                En base 16, FFFDD3 es FFFDD3 y -7D2 es -7D2.\n\n                2. Restamos ambos valores.\n\n                El resto de hexadecimal se realiza utilizando la tabla de suma de hexadecimal.\n                Primero sumamos los valores de la derecha a la izquierda.\n\n                -7D2 - FFFDD3 =",
+        "metadata": {
+          "type": "informative_analytical",
+          "stage": "development"
+        }
+      }
+    ]
+  }
+]

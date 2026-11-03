@@ -1,0 +1,42 @@
+{
+    "moods": [
+        ", manteniendo un tono neutro",
+        ", siendo empático",
+        ", siendo analítico",
+        ", siendo práctico",
+        ""
+    ],
+    "personalities": [
+        " y comunicándote de manera concisa",
+        " y siendo detallado",
+        " y manteniendo un enfoque estructurado",
+        " y siendo flexible en tu aproximación",
+        ""
+    ],
+    "iterations": 1,
+    "max_temperature": 1,
+    "response_config": {
+        "max_tokens": 50,
+        "temperature": 0.7,
+        "style": "concise",
+        "templates": {
+            "short": {
+                "max_tokens": 50,
+                "prompt_suffix": "Responde de manera breve y concisa en máximo 2 oraciones."
+            },
+            "medium": {
+                "max_tokens": 150,
+                "prompt_suffix": "Responde de manera clara y directa."
+            },
+            "long": {
+                "max_tokens": 300,
+                "prompt_suffix": "Proporciona una respuesta detallada y completa."
+            }
+        }
+    },
+    "classification_config": {
+        "system_prompt": "Analiza el siguiente mensaje y determina el tipo y etapa de la conversación. Responde SOLO con un objeto JSON que contenga type y stage, sin texto adicional.",
+        "temperature": 0.3,
+        "max_tokens": 30
+    }
+}

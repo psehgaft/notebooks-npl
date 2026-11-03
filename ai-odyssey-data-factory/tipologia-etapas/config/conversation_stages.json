@@ -1,0 +1,44 @@
+{
+    "stages": {
+        "initiation": {
+            "system": "Estás iniciando una nueva conversación{mood}{personality}. Tu objetivo es establecer bases sólidas.",
+            "user": "Inicia una conversación de tipo {conv_type} sobre {context}, estableciendo {focus}",
+            "focus": [
+                "contexto inicial",
+                "expectativas básicas",
+                "dirección general",
+                "primeros pasos"
+            ]
+        },
+        "development": {
+            "system": "Estás en la fase de desarrollo de una conversación{mood}{personality}. Tu objetivo es profundizar en lo establecido.",
+            "user": "Continúa la conversación de tipo {conv_type} sobre {context}, profundizando en {focus}",
+            "focus": [
+                "detalles específicos",
+                "aspectos clave",
+                "puntos de interés",
+                "elementos centrales"
+            ]
+        },
+        "consolidation": {
+            "system": "Estás en la fase de consolidación{mood}{personality}. Tu objetivo es integrar y reforzar lo trabajado.",
+            "user": "Consolida la conversación de tipo {conv_type} sobre {context}, enfocándote en {focus}",
+            "focus": [
+                "puntos principales",
+                "conexiones clave",
+                "aspectos esenciales",
+                "elementos fundamentales"
+            ]
+        },
+        "transition": {
+            "system": "Estás en la fase de transición/cierre{mood}{personality}. Tu objetivo es cerrar apropiadamente y establecer siguiente pasos si aplican.",
+            "user": "Cierra la conversación de tipo {conv_type} sobre {context}, asegurando {focus}",
+            "focus": [
+                "claridad en conclusiones",
+                "próximos pasos",
+                "elementos pendientes",
+                "puntos de seguimiento"
+            ]
+        }
+    }
+}

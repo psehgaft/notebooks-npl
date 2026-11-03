@@ -1,0 +1,580 @@
+{
+    "tipos": {
+        "asistencia_practica": {
+            "contexto": {
+                "hogar": {
+                    "mediante_servicio": {
+                        "servicios_basicos": {
+                            "gas": {
+                                "instalacion": [
+                                    "revisión de conexiones",
+                                    "cambio de tuberías",
+                                    "instalación de medidores",
+                                    "adaptación de salidas"
+                                ],
+                                "mantenimiento": [
+                                    "detección de fugas",
+                                    "limpieza de conductos",
+                                    "ajuste de presión",
+                                    "calibración de equipos"
+                                ]
+                            },
+                            "agua": {
+                                "plomeria": [
+                                    "reparación de tuberías",
+                                    "instalación de llaves",
+                                    "cambio de empaques",
+                                    "detección de fugas"
+                                ],
+                                "sistemas": [
+                                    "instalación de bombas",
+                                    "sistemas de filtración",
+                                    "calentadores de agua",
+                                    "sistemas de riego"
+                                ]
+                            }
+                        },
+                        "electrodomesticos": {
+                            "cocina": {
+                                "estufa": [
+                                    "instalación de gas",
+                                    "calibración de quemadores",
+                                    "reparación de encendido",
+                                    "mantenimiento general"
+                                ],
+                                "refrigerador": [
+                                    "ajuste de temperatura",
+                                    "cambio de filtros",
+                                    "reparación de compresor",
+                                    "mantenimiento de sellos"
+                                ]
+                            }
+                        }
+                    },
+                    "mediante_autogestion": {
+                        "mantenimiento_basico": {
+                            "limpieza": [
+                                "filtros de aire",
+                                "ductos de ventilación",
+                                "rejillas y difusores",
+                                "trampas de agua"
+                            ]
+                        }
+                    }
+                },
+                "tecnologia": {
+                    "mediante_asistencia_remota": {
+                        "software": {
+                            "sistemas_operativos": [
+                                "actualización de sistema",
+                                "configuración de usuarios",
+                                "gestión de programas",
+                                "solución de errores"
+                            ],
+                            "aplicaciones": [
+                                "instalación y configuración",
+                                "resolución de problemas",
+                                "actualización de versiones",
+                                "recuperación de datos"
+                            ]
+                        }
+                    }
+                }
+            },
+            "prompts": {
+                "sistema": {
+                    "base": "Eres un asistente especializado en proporcionar ayuda práctica y soluciones concretas{mood}{personality}.",
+                    "instrucciones": {
+                        "general": [
+                            "Enfócate en soluciones paso a paso",
+                            "Prioriza la claridad y precisión",
+                            "Mantén un tono profesional pero accesible"
+                        ],
+                        "por_medio": {
+                            "mediante_servicio": [
+                                "Indica cuando se requiera intervención profesional",
+                                "Explica los riesgos potenciales",
+                                "Detalla las calificaciones necesarias"
+                            ],
+                            "mediante_autogestion": [
+                                "Prioriza la seguridad del usuario",
+                                "Describe precauciones necesarias",
+                                "Indica cuando no proceder"
+                            ],
+                            "mediante_asistencia_remota": [
+                                "Verifica el entorno del usuario",
+                                "Confirma cada paso completado",
+                                "Proporciona alternativas si algo falla"
+                            ]
+                        }
+                    },
+                    "generacion_contexto": {
+                        "template": "Para {area} mediante {medio}, enfócate en {aspecto} relacionado con {elemento}",
+                        "variables": {
+                            "area": ["hogar", "tecnologia"],
+                            "medio": ["servicio", "autogestion", "asistencia_remota"],
+                            "mapeo_medio": {
+                                "servicio": "mediante_servicio",
+                                "autogestion": "mediante_autogestion",
+                                "asistencia_remota": "mediante_asistencia_remota"
+                            }
+                        }
+                    }
+                },
+                "usuario": {
+                    "patrones_inicio": {
+                        "mediante_servicio": [
+                            "Necesito ayuda con {servicio} en {ubicacion}",
+                            "¿Cómo puedo solucionar un problema de {servicio}?",
+                            "¿Qué debo revisar en mi {dispositivo}?"
+                        ],
+                        "mediante_autogestion": [
+                            "¿Cómo puedo hacer el mantenimiento de {elemento}?",
+                            "¿Qué pasos debo seguir para {accion}?",
+                            "¿Qué herramientas necesito para {tarea}?"
+                        ],
+                        "mediante_asistencia_remota": [
+                            "¿Cómo configuro {software} en mi {dispositivo}?",
+                            "Tengo problemas con {aplicacion}",
+                            "¿Cómo actualizo mi {sistema}?"
+                        ]
+                    },
+                    "generacion_contexto": {
+                        "template_inicial": "Necesito ayuda con {tarea_especifica} de {elemento} en {contexto}",
+                        "template_seguimiento": "Respecto a {elemento_previo}, ¿cómo puedo {nueva_accion}?",
+                        "mapeo_acciones": {
+                            "servicios_basicos": {
+                                "gas": ["revisar", "instalar", "mantener", "reparar"],
+                                "agua": ["detectar fugas", "instalar", "reparar", "mantener"]
+                            },
+                            "electrodomesticos": {
+                                "cocina": ["calibrar", "reparar", "mantener", "ajustar"]
+                            },
+                            "software": {
+                                "sistemas_operativos": ["actualizar", "configurar", "optimizar"],
+                                "aplicaciones": ["instalar", "configurar", "solucionar problemas"]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "apoyo_emocional": {
+            "contexto": {
+                "personal": {
+                    "mediante_conversacion": {
+                        "autoestima": {
+                            "confianza": [
+                                "reconocimiento de logros",
+                                "manejo de autocrítica",
+                                "desarrollo personal",
+                                "establecimiento de metas"
+                            ],
+                            "autoconocimiento": [
+                                "identificación de fortalezas",
+                                "reconocimiento de limitaciones",
+                                "desarrollo de habilidades",
+                                "gestión de emociones"
+                            ]
+                        },
+                        "relaciones": {
+                            "familiares": [
+                                "comunicación efectiva",
+                                "resolución de conflictos",
+                                "establecimiento de límites",
+                                "fortalecimiento de vínculos"
+                            ],
+                            "sociales": [
+                                "desarrollo de habilidades sociales",
+                                "manejo de situaciones difíciles",
+                                "construcción de relaciones",
+                                "mantenimiento de amistades"
+                            ]
+                        }
+                    }
+                },
+                "laboral": {
+                    "mediante_reflexion": {
+                        "desarrollo_profesional": {
+                            "crecimiento": [
+                                "identificación de oportunidades",
+                                "planificación de carrera",
+                                "desarrollo de competencias",
+                                "evaluación de progreso"
+                            ],
+                            "desafios": [
+                                "manejo de estrés",
+                                "balance trabajo-vida",
+                                "adaptación al cambio",
+                                "resolución de conflictos"
+                            ]
+                        }
+                    }
+                }
+            },
+            "prompts": {
+                "sistema": {
+                    "base": "Eres un asistente empático especializado en proporcionar apoyo emocional estructurado{mood}{personality}.",
+                    "instrucciones": {
+                        "general": [
+                            "Practica la escucha activa",
+                            "Valida las emociones expresadas",
+                            "Mantén un enfoque constructivo",
+                            "Evita juicios de valor"
+                        ],
+                        "por_medio": {
+                            "mediante_conversacion": [
+                                "Permite la expresión libre de emociones",
+                                "Usa preguntas abiertas",
+                                "Refleja el contenido emocional"
+                            ],
+                            "mediante_reflexion": [
+                                "Guía el proceso de introspección",
+                                "Ayuda a identificar patrones",
+                                "Fomenta el autoconocimiento"
+                            ]
+                        }
+                    },
+                    "generacion_contexto": {
+                        "template": "Para apoyo en {area} mediante {medio}, enfócate en {aspecto} relacionado con {elemento}",
+                        "variables": {
+                            "area": ["personal", "laboral"],
+                            "medio": ["conversacion", "reflexion"],
+                            "mapeo_medio": {
+                                "conversacion": "mediante_conversacion",
+                                "reflexion": "mediante_reflexion"
+                            }
+                        }
+                    }
+                },
+                "usuario": {
+                    "patrones_inicio": {
+                        "mediante_conversacion": [
+                            "Me siento {emocion} respecto a {situacion}",
+                            "No sé cómo manejar {situacion}",
+                            "Necesito hablar sobre {tema}"
+                        ],
+                        "mediante_reflexion": [
+                            "¿Cómo puedo mejorar mi {aspecto}?",
+                            "Estoy tratando de entender por qué {situacion}",
+                            "Quiero trabajar en mi {area_desarrollo}"
+                        ]
+                    },
+                    "generacion_contexto": {
+                        "template_inicial": "Necesito ayuda con {aspecto_especifico} en mi {contexto}",
+                        "template_seguimiento": "Respecto a {tema_previo}, ¿cómo puedo {nueva_accion}?",
+                        "mapeo_emociones": {
+                            "autoestima": {
+                                "confianza": ["inseguro", "dudoso", "preocupado"],
+                                "autoconocimiento": ["confundido", "perdido", "indeciso"]
+                            },
+                            "relaciones": {
+                                "familiares": ["frustrado", "tenso", "distanciado"],
+                                "sociales": ["aislado", "ansioso", "intimidado"]
+                            },
+                            "desarrollo_profesional": {
+                                "crecimiento": ["estancado", "desmotivado", "indeciso"],
+                                "desafios": ["estresado", "abrumado", "presionado"]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ,
+        "analisis_informativo": {
+            "contexto": {
+                "educativo": {
+                    "mediante_explicacion": {
+                        "conceptos_basicos": {
+                            "matematicas": {
+                                "aritmetica": [
+                                    "operaciones básicas",
+                                    "fracciones y decimales",
+                                    "porcentajes",
+                                    "resolución de problemas"
+                                ],
+                                "algebra": [
+                                    "ecuaciones lineales",
+                                    "funciones básicas",
+                                    "sistemas de ecuaciones",
+                                    "expresiones algebraicas"
+                                ]
+                            },
+                            "ciencias": {
+                                "fisica": [
+                                    "mecánica básica",
+                                    "energía y trabajo",
+                                    "electricidad básica",
+                                    "ondas y sonido"
+                                ],
+                                "quimica": [
+                                    "elementos y compuestos",
+                                    "reacciones químicas",
+                                    "estados de la materia",
+                                    "soluciones y mezclas"
+                                ]
+                            }
+                        }
+                    },
+                    "mediante_analisis": {
+                        "metodos_estudio": {
+                            "organizacion": [
+                                "planificación del tiempo",
+                                "técnicas de estudio",
+                                "toma de notas",
+                                "preparación de exámenes"
+                            ],
+                            "comprension": [
+                                "lectura efectiva",
+                                "análisis de textos",
+                                "mapas mentales",
+                                "resúmenes y síntesis"
+                            ]
+                        }
+                    }
+                },
+                "tecnico": {
+                    "mediante_investigacion": {
+                        "programacion": {
+                            "fundamentos": [
+                                "estructuras de control",
+                                "tipos de datos",
+                                "funciones y métodos",
+                                "algoritmos básicos"
+                            ],
+                            "desarrollo": [
+                                "patrones de diseño",
+                                "arquitectura de software",
+                                "bases de datos",
+                                "testing y depuración"
+                            ]
+                        }
+                    }
+                }
+            },
+            "prompts": {
+                "sistema": {
+                    "base": "Eres un asistente especializado en análisis y exploración de conocimiento{mood}{personality}.",
+                    "instrucciones": {
+                        "general": [
+                            "Estructura la información de manera clara y lógica",
+                            "Usa ejemplos relevantes para ilustrar conceptos",
+                            "Adapta la explicación al nivel del usuario",
+                            "Verifica la comprensión progresivamente"
+                        ],
+                        "por_medio": {
+                            "mediante_explicacion": [
+                                "Descompón conceptos complejos en partes manejables",
+                                "Usa analogías cuando sea apropiado",
+                                "Conecta con conocimientos previos"
+                            ],
+                            "mediante_analisis": [
+                                "Guía el proceso de análisis paso a paso",
+                                "Destaca relaciones y patrones importantes",
+                                "Fomenta el pensamiento crítico"
+                            ],
+                            "mediante_investigacion": [
+                                "Proporciona marcos de referencia claros",
+                                "Sugiere recursos adicionales relevantes",
+                                "Establece conexiones entre conceptos"
+                            ]
+                        }
+                    },
+                    "generacion_contexto": {
+                        "template": "Para {area} mediante {medio}, enfócate en {tema} considerando {nivel}",
+                        "variables": {
+                            "area": ["educativo", "tecnico"],
+                            "medio": ["explicacion", "analisis", "investigacion"],
+                            "mapeo_medio": {
+                                "explicacion": "mediante_explicacion",
+                                "analisis": "mediante_analisis",
+                                "investigacion": "mediante_investigacion"
+                            }
+                        }
+                    }
+                },
+                "usuario": {
+                    "patrones_inicio": {
+                        "mediante_explicacion": [
+                            "¿Podrías explicarme {concepto}?",
+                            "No entiendo bien {tema}",
+                            "¿Cómo funciona {proceso}?"
+                        ],
+                        "mediante_analisis": [
+                            "¿Cómo puedo analizar {tema}?",
+                            "Necesito entender mejor {concepto}",
+                            "¿Cuál es la mejor manera de estudiar {tema}?"
+                        ],
+                        "mediante_investigacion": [
+                            "¿Qué debo investigar sobre {tema}?",
+                            "¿Cómo puedo profundizar en {concepto}?",
+                            "Necesito recursos para estudiar {tema}"
+                        ]
+                    },
+                    "generacion_contexto": {
+                        "template_inicial": "Necesito ayuda para entender {tema_especifico} en {contexto}",
+                        "template_seguimiento": "Sobre {tema_previo}, ¿podrías explicar {nuevo_aspecto}?",
+                        "mapeo_conceptos": {
+                            "matematicas": {
+                                "aritmetica": ["sumar", "restar", "multiplicar", "dividir"],
+                                "algebra": ["despejar", "factorizar", "resolver", "simplificar"]
+                            },
+                            "ciencias": {
+                                "fisica": ["calcular", "medir", "analizar", "experimentar"],
+                                "quimica": ["balancear", "reaccionar", "separar", "combinar"]
+                            },
+                            "programacion": {
+                                "fundamentos": ["declarar", "iterar", "condicionar", "funcionar"],
+                                "desarrollo": ["diseñar", "implementar", "testear", "optimizar"]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "clarificacion_contextual": {
+            "contexto": {
+                "capacidades": {
+                    "mediante_explicacion": {
+                        "procesamiento_lenguaje": {
+                            "comprension": [
+                                "interpretación de contexto",
+                                "análisis de intención",
+                                "identificación de temas",
+                                "procesamiento de consultas"
+                            ],
+                            "generacion": [
+                                "respuestas coherentes",
+                                "explicaciones claras",
+                                "adaptación de estilo",
+                                "mantenimiento de contexto"
+                            ]
+                        },
+                        "analisis_datos": {
+                            "procesamiento": [
+                                "cálculos matemáticos",
+                                "análisis estadístico",
+                                "manejo de información",
+                                "interpretación de resultados"
+                            ],
+                            "visualizacion": [
+                                "generación de gráficos",
+                                "presentación de datos",
+                                "análisis de tendencias",
+                                "comparativas y resúmenes"
+                            ]
+                        }
+                    }
+                },
+                "limitaciones": {
+                    "mediante_aclaracion": {
+                        "aspectos_criticos": {
+                            "decisiones": [
+                                "consejos médicos",
+                                "asesoría legal",
+                                "recomendaciones financieras",
+                                "situaciones de emergencia"
+                            ],
+                            "actualizacion": [
+                                "eventos actuales",
+                                "información en tiempo real",
+                                "datos personales",
+                                "acceso a internet"
+                            ]
+                        }
+                    }
+                }
+            },
+            "prompts": {
+                "sistema": {
+                    "base": "Eres un asistente especializado en establecer marcos claros de interacción{mood}{personality}.",
+                    "instrucciones": {
+                        "general": [
+                            "Establece expectativas claras desde el inicio",
+                            "Comunica límites de manera constructiva",
+                            "Ofrece alternativas cuando sea posible",
+                            "Mantén la transparencia en la comunicación"
+                        ],
+                        "por_medio": {
+                            "mediante_explicacion": [
+                                "Describe capacidades de manera objetiva",
+                                "Usa ejemplos concretos",
+                                "Proporciona contexto relevante"
+                            ],
+                            "mediante_aclaracion": [
+                                "Identifica áreas de precaución",
+                                "Explica razones de limitaciones",
+                                "Sugiere alternativas apropiadas"
+                            ]
+                        }
+                    },
+                    "generacion_contexto": {
+                        "template": "Para {aspecto} mediante {medio}, aclara {tema} considerando {enfoque}",
+                        "variables": {
+                            "aspecto": ["capacidades", "limitaciones"],
+                            "medio": ["explicacion", "aclaracion"],
+                            "mapeo_medio": {
+                                "explicacion": "mediante_explicacion",
+                                "aclaracion": "mediante_aclaracion"
+                            }
+                        }
+                    }
+                },
+                "usuario": {
+                    "patrones_inicio": {
+                        "mediante_explicacion": [
+                            "¿Qué puedes hacer respecto a {tema}?",
+                            "¿Cómo manejas {aspecto}?",
+                            "¿Cuáles son tus capacidades en {area}?"
+                        ],
+                        "mediante_aclaracion": [
+                            "¿Cuáles son las limitaciones en {contexto}?",
+                            "¿Qué no puedes hacer respecto a {tema}?",
+                            "¿Debo tener precauciones con {aspecto}?"
+                        ]
+                    },
+                    "generacion_contexto": {
+                        "template_inicial": "Necesito entender tus {capacidad_tipo} respecto a {tema_especifico}",
+                        "template_seguimiento": "Sobre {tema_previo}, ¿podrías aclarar {nuevo_aspecto}?",
+                        "mapeo_aspectos": {
+                            "procesamiento_lenguaje": {
+                                "comprension": ["entender", "analizar", "identificar", "procesar"],
+                                "generacion": ["responder", "explicar", "adaptar", "mantener"]
+                            },
+                            "analisis_datos": {
+                                "procesamiento": ["calcular", "analizar", "manejar", "interpretar"],
+                                "visualizacion": ["generar", "presentar", "comparar", "resumir"]
+                            },
+                            "aspectos_criticos": {
+                                "decisiones": ["aconsejar", "asesorar", "recomendar", "asistir"],
+                                "actualizacion": ["informar", "actualizar", "acceder", "verificar"]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "metadata": {
+        "version": "2.1",
+        "last_updated": "2024-11-16",
+        "description": "Configuración integrada de tipos, contextos y generación de prompts",
+        "notas_uso": [
+            "Los contextos están organizados jerárquicamente por área y medio de asistencia",
+            "Cada tipo incluye patrones específicos para generación de prompts",
+            "Los templates deben ser poblados con valores del contexto correspondiente",
+            "Las instrucciones del sistema se adaptan según el medio de asistencia"
+        ],
+        "estructura_prompts": {
+            "sistema": {
+                "descripcion": "Define cómo el asistente debe comportarse y procesar las solicitudes",
+                "componentes": ["base", "instrucciones", "generacion_contexto"]
+            },
+            "usuario": {
+                "descripcion": "Define patrones para generar y procesar mensajes del usuario",
+                "componentes": ["patrones_inicio", "generacion_contexto"]
+            }
+        }
+    }
+}

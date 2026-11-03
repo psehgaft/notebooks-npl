@@ -1,0 +1,180 @@
+{
+    "types": {
+        "clarification_and_framing": {
+            "system": "Eres un asistente enfocado en establecer marcos claros de interacción{mood}{personality}. Tu objetivo es crear una base sólida para el diálogo.",
+            "user": "Responde a la siguiente consulta estableciendo expectativas y límites claros sobre {context}",
+            "context": [
+                "el alcance de tus capacidades en procesamiento de lenguaje",
+                "tus limitaciones en temas médicos y psicológicos",
+                "tu rol como asistente en temas financieros",
+                "tus capacidades de análisis de datos",
+                "tus límites en recomendaciones personales",
+                "tu enfoque en mantener conversaciones productivas",
+                "tus capacidades de asistencia en desarrollo",
+                "tus límites en toma de decisiones críticas"
+            ],
+            "capability_context": [
+                "capacidades de procesamiento de texto",
+                "habilidades de análisis y cálculo",
+                "manejo de diferentes idiomas",
+                "capacidades de programación",
+                "análisis de datos y estadísticas",
+                "generación de contenido creativo"
+            ],
+            "limitation_context": [
+                "límites en toma de decisiones críticas",
+                "restricciones en consejos médicos",
+                "límites en asesoría legal",
+                "restricciones en temas financieros",
+                "límites en recomendaciones personales",
+                "restricciones en temas sensibles"
+            ],
+            "role_context": [
+                "rol como asistente educativo",
+                "papel en análisis técnico",
+                "función en soporte emocional",
+                "rol en resolución de problemas",
+                "papel como guía informativo",
+                "función en desarrollo profesional"
+            ],
+            "style": [
+                "profesional y directo",
+                "amigable pero claro",
+                "formal y estructurado",
+                "conciso y preciso"
+            ]
+        },
+        "structured_emotional_support": {
+            "system": "Eres un asistente que proporciona apoyo emocional estructurado{mood}{personality}. Tu objetivo es facilitar expresión y reflexión dentro de límites apropiados.",
+            "user": "Responde a la siguiente situación emocional: {context}. Mantén el enfoque en {focus}",
+            "context": [
+                "sentimiento de soledad en nuevo trabajo",
+                "estrés por deadlines",
+                "frustración con progreso personal",
+                "ansiedad por decisiones importantes",
+                "desmotivación en proyectos",
+                "dudas sobre capacidades propias"
+            ],
+            "personal_context": [
+                "manejo de relaciones interpersonales",
+                "desarrollo de autoestima y confianza",
+                "balance vida-trabajo",
+                "manejo del estrés personal",
+                "proceso de cambios de vida",
+                "desarrollo de hábitos saludables"
+            ],
+            "family_context": [
+                "comunicación familiar",
+                "roles y responsabilidades",
+                "conflictos familiares",
+                "apoyo en crisis familiares",
+                "cambios en dinámica familiar",
+                "relaciones padres-hijos"
+            ],
+            "professional_context": [
+                "adaptación a nuevo trabajo",
+                "relaciones laborales",
+                "desarrollo profesional",
+                "burnout laboral",
+                "conflictos en el trabajo",
+                "cambios de carrera"
+            ],
+            "focus": [
+                "escucha activa y validación",
+                "reflexión y clarificación",
+                "identificación de recursos",
+                "exploración de perspectivas"
+            ]
+        },
+        "informative_analytical": {
+            "system": "Eres un asistente enfocado en análisis y exploración de conocimiento{mood}{personality}. Tu objetivo es facilitar comprensión y pensamiento crítico.",
+            "user": "Analiza el siguiente tema: {context}, enfocándote en {focus} con un nivel de profundidad {depth}",
+            "context": [
+                "conceptos de programación orientada a objetos",
+                "principios de arquitectura de software",
+                "metodologías ágiles de desarrollo",
+                "patrones de diseño comunes",
+                "estrategias de testing",
+                "optimización de bases de datos"
+            ],
+            "theoretical_concepts": [
+                "fundamentos de estructuras de datos",
+                "principios SOLID de programación",
+                "teoría de bases de datos",
+                "conceptos de redes y protocolos",
+                "fundamentos de seguridad informática",
+                "paradigmas de programación"
+            ],
+            "applied_concepts": [
+                "análisis de algoritmos y complejidad",
+                "diseño de APIs y servicios web",
+                "arquitecturas distribuidas",
+                "sistemas de cache y optimización",
+                "patrones de integración",
+                "estrategias de escalabilidad"
+            ],
+            "academic_concepts": [
+                "matemáticas discretas",
+                "teoría de grafos",
+                "lógica computacional",
+                "teoría de autómatas",
+                "métodos formales",
+                "teoría de la computación"
+            ],
+            "focus": [
+                "conceptos fundamentales",
+                "aplicaciones prácticas",
+                "ventajas y desventajas",
+                "comparativas y análisis"
+            ],
+            "depth": [
+                "introductorio",
+                "intermedio",
+                "avanzado",
+                "experto"
+            ]
+        },
+        "practical_assistance": {
+            "system": "Eres un asistente enfocado en soluciones prácticas{mood}{personality}. Tu objetivo es facilitar la resolución de tareas concretas.",
+            "user": "Proporciona asistencia práctica para: {context}, considerando {consideration}",
+            "context": [
+                "configuración de entorno de desarrollo",
+                "debugging de código",
+                "optimización de consultas",
+                "implementación de funcionalidades",
+                "resolución de conflictos git",
+                "despliegue de aplicaciones"
+            ],
+            "technical_context": [
+                "instalación y configuración de IDEs",
+                "uso de herramientas de debugging",
+                "optimización de rendimiento de aplicaciones",
+                "manejo de dependencias y paquetes",
+                "configuración de servidores y servicios",
+                "gestión de bases de datos"
+            ],
+            "daily_context": [
+                "problemas con dispositivos móviles",
+                "configuración de electrodomésticos",
+                "mantenimiento básico del hogar",
+                "instalación de software común",
+                "respaldo y recuperación de datos",
+                "problemas de conexión a internet"
+            ],
+            "professional_context": [
+                "uso de herramientas ofimáticas",
+                "gestión de correo electrónico",
+                "organización de archivos y documentos",
+                "problemas con videoconferencias",
+                "gestión de calendarios y agenda",
+                "problemas de impresión y escáner"
+            ],
+            "consideration": [
+                "eficiencia y rendimiento",
+                "mantenibilidad del código",
+                "mejores prácticas",
+                "escalabilidad"
+            ]
+        }
+    }
+}
